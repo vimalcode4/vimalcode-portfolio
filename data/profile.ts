@@ -1,0 +1,29 @@
+export const profile = {
+  name: "Vimal Vidyadhaaran Kalliappan Jai",
+  brand: "VIMALCODE",
+  shortName: "Vimal Code",
+  title: "Software Engineer | AI Engineer | Data Science Learner",
+  tagline:
+    "Minimal, professional portfolio focused on software, AI, and meaningful projects.",
+  email: "vimalcodeyt@gmail.com",
+  availability: "Open to Internships & Collaborations",
+  photo: "/vimal_code.png",
+  icon: "/vimal_icon.png",
+  links: {
+    github: "https://github.com/vimalcode4",
+    linkedin: "https://www.linkedin.com/in/vimal-vidyadhaaran-229622255/",
+    medium: "https://medium.com/@vimalcode4",
+    instagram: "https://www.instagram.com/vimalcode/",
+    pinterest: "https://uk.pinterest.com/vimalcode4/",
+    spotify: "https://open.spotify.com/playlist/1szxVErUKUJd77BXERhQpK",
+    beacons: "https://beacons.ai/vimalcode",
+  },
+  highlights: [
+    "Open Source Contributions",
+    "Full-Stack Development",
+    "AI & Machine Learning",
+    "Continuous Learning",
+    "Software Architecture",
+    "Problem Solving",
+  ],
+};
