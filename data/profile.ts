@@ -8,7 +8,7 @@ export const profile = {
   email: "vimalcodeyt@gmail.com",
   availability: "Open to Internships & Collaborations",
   photo: "/vimal_code.png",
-  icon: "/vimal_icon.png",
+  icon: "/favicon.png",
   links: {
     website: "https://vimalcode.me",
     github: "https://github.com/vimalcode4",

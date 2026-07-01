@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     canonical: "https://vimalcode.me",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
   openGraph: {
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Vimal Code",
     title: "Vimal Code",
     description:
-      "Vimal Code is the portfolio of Vimal Vidyadhaaran, a Software Engineer, AI Engineer, and Full Stack Developer building polished web experiences, intelligent products, and data-driven solutions.",
+      "Vimal Code is a Software Engineer, AI Engineer, and Full Stack Developer building polished web experiences, intelligent products, and data-driven solutions.",
     images: [
       {
         url: "/vimal_code.png",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vimal Code",
     description:
-      "Vimal Code is the portfolio of Vimal Vidyadhaaran, a Software Engineer, AI Engineer, and Full Stack Developer building polished web experiences, intelligent products, and data-driven solutions.",
+      "Vimal Code is a Software Engineer, AI Engineer, and Full Stack Developer building polished web experiences, intelligent products, and data-driven solutions.",
     images: ["/vimal_code.png"],
   },
   robots: {
