@@ -15,6 +15,6 @@ export const projects = [
       "A web-based public issue reporting system that helps citizens submit civic problems and track resolution progress.",
     tech: ["HTML", "CSS", "JavaScript"],
     emphasis: "Complaint submission, status tracking, and admin-side issue management.",
-    github: "https://github.com/vimalcode4",
+    github: "https://clean-street.vercel.app/",
   },
 ];
