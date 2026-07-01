@@ -10,8 +10,10 @@ export const profile = {
   photo: "/vimal_code.png",
   icon: "/vimal_icon.png",
   links: {
+    website: "https://vimalcode.me",
     github: "https://github.com/vimalcode4",
-    linkedin: "https://www.linkedin.com/in/vimal-vidyadhaaran-229622255/",
+    linkedin: "https://www.linkedin.com/in/vimalcode/",
+    x: "https://x.com/Vimalcode",
     medium: "https://medium.com/@vimalcode4",
     instagram: "https://www.instagram.com/vimalcode/",
     pinterest: "https://uk.pinterest.com/vimalcode4/",

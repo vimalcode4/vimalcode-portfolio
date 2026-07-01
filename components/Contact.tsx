@@ -5,6 +5,7 @@ import { profile } from "@/data/profile";
 const socialLinks = [
   { label: "GitHub", href: profile.links.github },
   { label: "LinkedIn", href: profile.links.linkedin },
+  { label: "X", href: profile.links.x },
   { label: "Medium", href: profile.links.medium },
   { label: "Instagram", href: profile.links.instagram },
   { label: "Pinterest", href: profile.links.pinterest },
