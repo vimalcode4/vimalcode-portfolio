@@ -112,7 +112,22 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-[var(--background)] text-[var(--foreground)]">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PW1CF1RMYF"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PW1CF1RMYF');
+          `}
+        </Script>
+
         {children}
+
         <Script
           id="person-jsonld"
           type="application/ld+json"
