@@ -1,20 +1,17 @@
 import { ArrowUpRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa6";
 
 import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 py-24 lg:px-8">
+    <section id="projects" className="section-shell scroll-mt-32 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.36em] text-[var(--accent)]">
-            Projects
-          </p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight text-[var(--foreground)]">
+          <p className="section-kicker">03 / Projects</p>
+          <h2 className="section-title sm:max-w-none">
             Selected work with a clear professional presentation.
           </h2>
-          <p className="mt-4 text-lg leading-8 text-[var(--muted)]">
+          <p className="section-description">
             Two core projects that reflect my internship experience and my
             college major project direction.
           </p>
@@ -24,7 +21,7 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group rounded-[2rem] border border-[var(--border)] bg-white p-6 shadow-[0_20px_60px_rgba(21,32,51,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              className="surface-panel surface-hover group rounded-[2rem] p-6"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -39,10 +36,10 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--background-soft)] text-[var(--foreground)] transition-colors hover:bg-[var(--foreground)] hover:text-white"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] transition hover:border-[var(--border-strong)] hover:text-[var(--accent)] hover:shadow-[0_0_18px_rgba(57,255,20,0.12)]"
                   aria-label={`Open ${project.title} GitHub profile`}
                 >
-                  <FaGithub className="h-5 w-5" />
+                  <ArrowUpRight className="h-5 w-5" />
                 </a>
               </div>
 
@@ -50,7 +47,7 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <p className="mt-4 rounded-2xl bg-[var(--background-soft)] px-4 py-3 text-sm leading-7 text-[var(--muted)]">
+              <p className="surface-panel mt-4 rounded-2xl px-4 py-3 text-sm leading-7 text-[var(--muted)]">
                 {project.emphasis}
               </p>
 
@@ -58,7 +55,7 @@ export default function Projects() {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full border border-[var(--border)] bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--foreground)]"
+                    className="neon-chip px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]"
                   >
                     {tech}
                   </span>
@@ -71,7 +68,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-[var(--accent)] transition-transform hover:translate-x-0.5"
+                  className="inline-flex items-center gap-2 text-[var(--accent)] hover:translate-x-0.5 hover:text-[var(--accent-muted)]"
                 >
                   Open link
                   <ArrowUpRight className="h-4 w-4" />

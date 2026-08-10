@@ -111,7 +111,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-[var(--background)] text-[var(--foreground)]">
+      <body className="min-h-full bg-[var(--background)] text-[var(--foreground)] antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PW1CF1RMYF"
           strategy="afterInteractive"
