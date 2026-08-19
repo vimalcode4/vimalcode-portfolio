@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://vimalcode.me',
+      url: 'https://www.vimalcode.me/',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,

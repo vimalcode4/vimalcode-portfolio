@@ -10,7 +10,7 @@ export const profile = {
   photo: "/vimal_code.png",
   icon: "/favicon.png",
   links: {
-    website: "https://vimalcode.me",
+    website: "https://www.vimalcode.me/",
     github: "https://github.com/vimalcode4",
     linkedin: "https://www.linkedin.com/in/vimalcode/",
     x: "https://x.com/Vimalcode",

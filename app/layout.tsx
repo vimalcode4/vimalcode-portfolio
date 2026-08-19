@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Vimal Code is the portfolio of Vimal Vidyadhaaran, a Software Engineer, AI Engineer, and Full Stack Developer building polished web experiences, intelligent products, and data-driven solutions.",
-  metadataBase: new URL("https://vimalcode.me"),
+  metadataBase: new URL("https://www.vimalcode.me/"),
   applicationName: "Vimal Code",
   keywords: [
     "Vimal Code",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Vimal Vidyadhaaran" }],
   creator: "Vimal Vidyadhaaran",
   alternates: {
-    canonical: "https://vimalcode.me",
+    canonical: "https://www.vimalcode.me/",
   },
   icons: {
     icon: "/favicon.ico",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://vimalcode.me",
+    url: "https://www.vimalcode.me/",
     siteName: "Vimal Code",
     title: "Vimal Code",
     description:
@@ -87,17 +87,24 @@ export const metadata: Metadata = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://www.vimalcode.me/#person",
   name: "Vimal Vidyadhaaran",
   alternateName: "Vimal Code",
-  url: "https://vimalcode.me",
-  image: "https://vimalcode.me/vimal_code.png",
+  url: "https://www.vimalcode.me/",
+  image: "https://www.vimalcode.me/vimal_code.png",
   jobTitle: "Software Engineer",
   description:
     "Software Engineering, AI, Data Science, and Full Stack Development portfolio of Vimal Vidyadhaaran.",
   sameAs: [
-    "https://vimalcode.me",
+    "https://www.vimalcode.me/",
+    "https://github.com/vimalcode4",
     "https://www.linkedin.com/in/vimalcode/",
     "https://x.com/Vimalcode",
+    "https://medium.com/@vimalcode4",
+    "https://www.instagram.com/vimalcode/",
+    "https://uk.pinterest.com/vimalcode4/",
+    "https://open.spotify.com/playlist/1szxVErUKUJd77BXERhQpK",
+    "https://beacons.ai/vimalcode",
   ],
 };
 
