@@ -3,7 +3,7 @@ import { skills } from "@/data/skills";
 export default function Skills() {
   return (
     <section id="skills" className="section-shell scroll-mt-32 px-6 lg:px-8">
-      <div className="surface-panel mx-auto max-w-7xl rounded-[2.25rem] p-8 sm:p-10">
+      <div className="surface-panel mx-auto max-w-7xl rounded-2xl p-8 sm:p-10">
         <div className="max-w-2xl">
           <p className="section-kicker">02 / Skills</p>
           <h2 className="section-title sm:max-w-none">

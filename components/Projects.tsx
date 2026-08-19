@@ -21,7 +21,7 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="surface-panel surface-hover group rounded-[2rem] p-6"
+              className="surface-panel surface-hover group rounded-2xl p-6"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -36,7 +36,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] transition hover:border-[var(--border-strong)] hover:text-[var(--accent)] hover:shadow-[0_0_18px_rgba(57,255,20,0.12)]"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] transition hover:border-[var(--border-strong)] hover:text-[var(--accent)] hover:shadow-[0_0_18px_rgba(100,255,218,0.12)]"
                   aria-label={`Open ${project.title} GitHub profile`}
                 >
                   <ArrowUpRight className="h-5 w-5" />

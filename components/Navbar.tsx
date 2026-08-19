@@ -45,18 +45,18 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 w-full px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="nav-shell mx-auto max-w-7xl rounded-[1.5rem]">
-        <div className="flex items-center justify-between gap-4 px-4 py-4 sm:px-5 lg:px-6">
+    <nav className="fixed top-0 z-50 w-full px-3 pt-3 sm:px-6 sm:pt-4 lg:px-8">
+      <div className="nav-shell mx-auto max-w-7xl rounded-xl">
+        <div className="flex items-center justify-between gap-3 px-3 py-3 sm:gap-4 sm:px-5 sm:py-4 lg:px-6">
           <a href="#home" className="flex items-center gap-3" aria-label="VimalCode home">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border-strong)] bg-[rgba(57,255,20,0.08)] text-sm font-black tracking-[0.32em] text-[var(--accent)] shadow-[0_0_24px_rgba(57,255,20,0.12)]">
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border-strong)] bg-[rgba(100,255,218,0.08)] text-xs font-black tracking-[0.28em] text-[var(--accent)] shadow-[0_0_24px_rgba(100,255,218,0.12)] sm:h-11 sm:w-11 sm:text-sm">
               VC
             </span>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--foreground)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--foreground)] sm:text-sm sm:tracking-[0.28em]">
                 VimalCode
               </p>
-              <p className="text-xs text-[var(--muted)]">Professional portfolio</p>
+              <p className="hidden text-xs text-[var(--muted)] sm:block">Professional portfolio</p>
             </div>
           </a>
 
@@ -85,7 +85,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border)] bg-[rgba(11,15,11,0.9)] text-[var(--foreground)] transition hover:border-[var(--border-strong)] hover:text-[var(--accent)] md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[rgba(17,34,64,0.9)] text-[var(--foreground)] transition hover:border-[var(--border-strong)] hover:text-[var(--accent)] md:hidden sm:h-11 sm:w-11"
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
             onClick={() => setMobileOpen((current) => !current)}
@@ -97,7 +97,7 @@ export default function Navbar() {
         {mobileOpen ? (
           <div
             id="mobile-navigation"
-            className="border-t border-[rgba(57,255,20,0.12)] px-4 pb-4 pt-3 md:hidden"
+            className="border-t border-[rgba(100,255,218,0.12)] px-4 pb-4 pt-3 md:hidden"
           >
             <div className="grid gap-2">
               {navItems.map((item) => (

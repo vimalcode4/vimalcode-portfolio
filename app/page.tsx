@@ -8,8 +8,8 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <main className="relative isolate overflow-hidden bg-transparent">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[radial-gradient(circle_at_top,rgba(57,255,20,0.12),transparent_50%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(circle_at_center,rgba(124,255,91,0.04),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[radial-gradient(circle_at_top,rgba(100,255,218,0.1),transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[36rem] bg-[radial-gradient(circle_at_center,rgba(82,224,196,0.035),transparent_60%)]" />
       <Navbar />
       <Hero />
       <About />
