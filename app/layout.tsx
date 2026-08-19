@@ -40,8 +40,14 @@ export const metadata: Metadata = {
     canonical: "https://www.vimalcode.me/",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+        sizes: "1254x1254",
+      },
+    ],
+    shortcut: "/icon.png",
   },
   openGraph: {
     type: "website",
