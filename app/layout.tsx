@@ -42,12 +42,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+      {
         url: "/icon.png",
         type: "image/png",
         sizes: "1254x1254",
       },
     ],
-    shortcut: "/icon.png",
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     type: "website",
@@ -84,9 +88,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "replace-with-google-site-verification",
   },
 };
 
