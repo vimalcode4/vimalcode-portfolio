@@ -6,116 +6,68 @@ import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
-    <section id="home" className="section-shell scroll-mt-32 px-6 pt-28 sm:pt-36 lg:px-8">
-      <div className="mx-auto grid min-h-[calc(100svh-6rem)] max-w-7xl items-center gap-10 sm:gap-12 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="max-w-3xl">
+    <section
+  id="home"
+  className="section-shell scroll-mt-32 px-6 pt-8 pb-0 sm:pt-10 lg:px-8 lg:pt-8 lg:pb-0"
+>
+ <div className="mx-auto grid min-h-[calc(100vh-07rem)] max-w-6xl items-center gap-12 sm:gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        {/* Text */}
+        <div className="max-w-2xl lg:order-2">
           <div className="surface-panel inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)]">
             <Sparkles className="h-4 w-4 text-[var(--accent)]" />
             {profile.title}
           </div>
 
-          <p className="section-kicker mt-8">
+          <p className="section-kicker mt-7">
             Hey, I’m {profile.shortName}
           </p>
 
-          <h1 className="glow-title mt-4 text-4xl font-black tracking-tight text-[var(--foreground)] sm:text-6xl lg:text-7xl">
-            Building <span className="text-[var(--accent)]">clean</span> products,
-            <span className="block text-[var(--muted)]">learning AI deeply.</span>
+          <h1 className="mt-4 text-5xl font-normal leading-[1.08] tracking-[-0.045em] text-[var(--foreground)] sm:text-6xl lg:text-[3.75rem]">
+            hi,{" "}
+            <span className="font-bold text-[var(--accent)]">
+              {profile.shortName.toLowerCase()}
+            </span>{" "}
+            here.
+            <span
+              className="ml-2 inline-block h-[0.9em] w-[3px] translate-y-[0.08em] bg-[var(--accent)]"
+              style={{
+                animation: "cursor-blink 1s steps(1) infinite",
+              }}
+            />
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
-            {profile.tagline} I focus on software engineering, AI, data science,
-            and creating a polished online presence for my career and content.
+          <p className="mt-6 max-w-2xl text-[17px] leading-[1.9] text-[var(--muted)] sm:text-lg">
+            I primarily work on backend development, data science, machine
+            learning, and building scalable applications that solve real-world
+            problems. I enjoy transforming ideas into practical software
+            solutions through clean code, structured problem-solving, and
+            continuous learning.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            {profile.highlights.map((item) => (
-              <span
-                key={item}
-                className="neon-chip px-4 py-2 text-sm font-medium"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
-            <a
-              href="#projects"
-              className="neon-button-primary w-full rounded-[1rem] px-6 py-3 text-sm sm:w-auto"
-            >
-              View projects
-              <ArrowRight className="h-4 w-4" />
-            </a>
+          <div className="mt-8">
             <a
               href={`mailto:${profile.email}`}
-              className="neon-button-secondary w-full rounded-[1rem] px-6 py-3 text-sm sm:w-auto"
+              className="neon-button-secondary inline-flex rounded-[0.75rem] px-5 py-2.5 text-sm"
             >
               <Mail className="h-4 w-4" />
-              Contact me
+              Say hello
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4 text-sm text-[var(--muted)]">
-            <a
-              href={profile.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--accent)] hover:[text-shadow:0_0_14px_rgba(100,255,218,0.18)]"
-            >
-              <FaGithub className="h-4 w-4" />
-              GitHub
-            </a>
-            <a
-              href={profile.links.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-[var(--accent)] hover:[text-shadow:0_0_14px_rgba(100,255,218,0.18)]"
-            >
-              <FaLinkedin className="h-4 w-4" />
-              LinkedIn
-            </a>
-            <span className="neon-chip px-4 py-2 font-medium text-[var(--foreground)]">
-              {profile.availability}
-            </span>
-          </div>
+
         </div>
 
-        <div className="relative mx-auto w-full max-w-xl">
-          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_center,rgba(100,255,218,0.12),transparent_58%)] blur-3xl" />
-          <div className="surface-panel rounded-2xl p-5 shadow-[0_30px_90px_rgba(2,12,27,0.4)]">
-            <div className="rounded-xl bg-[linear-gradient(180deg,rgba(23,42,70,0.78),rgba(10,25,47,0.9))] p-4">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--surface)]">
-                <Image
-                  src={profile.photo}
-                  alt={`${profile.shortName} portrait`}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover object-center"
-                />
-              </div>
-
-              <div className="surface-panel mt-4 rounded-xl p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--accent)]">
-                  Current focus
-                </p>
-                <div className="mt-3 grid gap-3 text-sm text-[var(--muted)] sm:grid-cols-2">
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-3">
-                    Open source contributions
-                  </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-3">
-                    Full-stack development
-                  </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-3">
-                    AI and machine learning
-                  </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-3">
-                    Content creation
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Photo */}
+        <div className="relative flex w-full items-center justify-center lg:order-1 lg:justify-center">
+          <div className="relative aspect-[4/5] w-full max-w-[290px] overflow-hidden">
+            <Image
+              src={profile.photo}
+              alt={`${profile.shortName} portrait`}
+              fill
+              priority
+              sizes="(max-width: 1024px) 80vw, 30vw"
+              className="object-cover object-center"
+            />
           </div>
         </div>
       </div>

@@ -1,98 +1,148 @@
-import { GraduationCap, Target } from "lucide-react";
+import { Code2, Cpu, Gamepad2 } from "lucide-react";
 import { FaYoutube } from "react-icons/fa6";
 
 export default function About() {
   return (
-    <section id="about" className="section-shell scroll-mt-32 px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p className="section-kicker">01 / About</p>
-          <h2 className="section-title sm:max-w-none">
-            Calm design, serious direction, and a clear growth path.
-          </h2>
-          <p className="section-description">
-            I’m building VimalCode as a professional portfolio that shows my
-            work in software, AI, data science, and content creation. My focus
-            is to keep things minimal, modern, and genuinely useful for
-            recruiters, collaborators, and future opportunities with global
-            technology teams.
+    <section
+      id="about"
+      className="section-shell -mt-25 scroll-mt-32 px-6 lg:px-8"
+    >
+      <div className="mx-auto max-w-7xl">
+
+        {/* =====================================================
+            ABOUT
+        ===================================================== */}
+        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+
+          {/* LEFT — BIG EDITORIAL STATEMENT */}
+          <div>
+
+            <p className="section-kicker">
+              01 / About
+            </p>
+
+           <h2 className="mt-5 max-w-2xl text-5xl font-bold leading-[0.98] tracking-[-0.04em] text-[var(--foreground-bright)] sm:text-6xl lg:text-6xl">
+              <span className="block">Just a nerd in progress.</span>
+              <span className="block">Building with purpose.</span>
+              <span className="block">Growing every day.</span>
+            </h2>
+
+        <div className="mt-8 max-w-3xl">
+          <p className="section-description text-[18px] leading-[1.8] sm:text-[25px]">
+            I’m Vimal, the person behind VimalCode. I build software, explore AI
+            and data science, and turn ideas into practical projects. I also enjoy
+            creating content, experimenting with technology, and sharing what I
+            learn along the way.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="surface-panel surface-hover rounded-xl p-5">
-              <Target className="h-5 w-5 text-[var(--accent)]" />
-              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--muted)]">
-                Passion
+        </div>
+
+          </div>
+
+
+          {/* RIGHT — CURRENTLY */}
+          <div className="lg:pt-16">
+
+            <div className="surface-panel rounded-2xl p-6 sm:p-7">
+
+              <p className="section-kicker">
+                Currently
               </p>
-              <p className="mt-2 text-lg font-semibold text-[var(--foreground)]">
-                Creating software & sharing knowledge
-              </p>
+
+              <div className="mt-6 space-y-5">
+
+                {/* SOFTWARE */}
+                <div className="border-b border-[var(--border)] pb-5">
+                  <div className="flex items-start gap-4">
+
+                    <Code2
+                      className="mt-1 h-5 w-5 shrink-0 text-[var(--accent)]"
+                    />
+
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-[var(--muted)]">
+                        01
+                      </p>
+
+                      <p className="mt-1 text-lg font-semibold text-[var(--foreground-bright)]">
+                        Software Development
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                {/* AI */}
+                <div className="border-b border-[var(--border)] pb-5">
+                  <div className="flex items-start gap-4">
+
+                    <Cpu
+                      className="mt-1 h-5 w-5 shrink-0 text-[var(--accent)]"
+                    />
+
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-[var(--muted)]">
+                        02
+                      </p>
+
+                      <p className="mt-1 text-lg font-semibold text-[var(--foreground-bright)]">
+                        AI & Data Science
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                {/* CONTENT */}
+                <div className="border-b border-[var(--border)] pb-5">
+                  <div className="flex items-start gap-4">
+
+                    <FaYoutube
+                      className="mt-1 h-5 w-5 shrink-0 text-[var(--accent)]"
+                    />
+
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-[var(--muted)]">
+                        03
+                      </p>
+
+                      <p className="mt-1 text-lg font-semibold text-[var(--foreground-bright)]">
+                        Content & Creativity
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                {/* GAMES */}
+                <div>
+                  <div className="flex items-start gap-4">
+
+                    <Gamepad2
+                      className="mt-1 h-5 w-5 shrink-0 text-[var(--accent)]"
+                    />
+
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-[var(--muted)]">
+                        04
+                      </p>
+
+                      <p className="mt-1 text-lg font-semibold text-[var(--foreground-bright)]">
+                        Technology & Games
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
             </div>
-            <div className="surface-panel surface-hover rounded-xl p-5">
-              <GraduationCap className="h-5 w-5 text-[var(--accent)]" />
-              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--muted)]">
-                Goal
-              </p>
-              <p className="mt-2 text-lg font-semibold text-[var(--foreground)]">
-                Software Engineer specializing in AI
-              </p>
-            </div>
+
           </div>
         </div>
 
-        <div className="grid gap-4">
-          <div className="surface-panel rounded-2xl p-6">
-            <p className="section-kicker">Snapshot</p>
-            <div className="mt-4 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-                <p className="text-sm text-[var(--muted)]">Role focus</p>
-                <p className="mt-2 text-base font-semibold text-[var(--foreground)]">
-                  Software Engineer
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-                <p className="text-sm text-[var(--muted)]">Secondary path</p>
-                <p className="mt-2 text-base font-semibold text-[var(--foreground)]">
-                  AI & Data Science
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-4">
-                <p className="text-sm text-[var(--muted)]">Creative side</p>
-                <p className="mt-2 text-base font-semibold text-[var(--foreground)]">
-                  YouTube & content
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="surface-panel surface-hover rounded-2xl p-6">
-              <Target className="h-5 w-5 text-[var(--accent)]" />
-              <h3 className="mt-4 text-xl font-semibold text-[var(--foreground)]">
-                Current mission
-              </h3>
-              <p className="mt-3 text-[var(--muted)]">
-                Building production-ready web applications, improving AI and
-                data science skills, and creating projects that reflect real
-                software engineering practices.
-              </p>
-            </div>
-            <div className="surface-panel surface-hover rounded-2xl p-6">
-              <FaYoutube className="h-5 w-5 text-[var(--accent)]" />
-              <h3 className="mt-4 text-xl font-semibold text-[var(--foreground)]">
-                Content direction<br></br>
-              </h3>
-              <p className="mt-3 text-[var(--muted)]">
-                • Tech & Coding <br></br>
-                • Web Development <br></br>
-                • AI & Projects <br></br>
-                • Lifestyle <br></br>
-                • Travel & Vlogs <br></br>
-                • Creative Ideas <br></br>
-                • Daily Life
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -16,13 +16,14 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
-      <footer className="footer-shell px-6 py-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl items-center justify-center text-sm text-[var(--muted)]">
+      <footer className="px-6 py-8 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center text-center text-sm text-[var(--muted)]">
           <p>
-            <span className="font-semibold tracking-[0.2em] text-[var(--accent)]">
-              VimalCode
-            </span>{" "}
-            © 2026. All rights reserved.
+            <span className="font-semibold tracking-[0.15em] text-[var(--accent)]">
+              Built and designed by VimalCode
+            </span>
+            <br />
+            <span>© 2026. All rights reserved.</span>
           </p>
         </div>
       </footer>

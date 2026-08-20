@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Mail, Menu, X } from "lucide-react";
+import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa6";
+
+import { profile } from "@/data/profile";
 
 const navItems = [
   { label: "About", href: "#about", id: "about" },
@@ -45,28 +48,29 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 w-full px-3 pt-3 sm:px-6 sm:pt-4 lg:px-8">
-      <div className="nav-shell mx-auto max-w-7xl rounded-xl">
-        <div className="flex items-center justify-between gap-3 px-3 py-3 sm:gap-4 sm:px-5 sm:py-4 lg:px-6">
-          <a href="#home" className="flex items-center gap-3" aria-label="VimalCode home">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border-strong)] bg-[rgba(100,255,218,0.08)] text-xs font-black tracking-[0.28em] text-[var(--accent)] shadow-[0_0_24px_rgba(100,255,218,0.12)] sm:h-11 sm:w-11 sm:text-sm">
-              VC
-            </span>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--foreground)] sm:text-sm sm:tracking-[0.28em]">
-                VimalCode
-              </p>
-              <p className="hidden text-xs text-[var(--muted)] sm:block">Professional portfolio</p>
-            </div>
+    <nav className="fixed top-0 z-50 w-full border-b border-[rgba(100,255,218,0.12)] bg-[#0a192f]">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex h-16 items-center">
+
+          {/* VIMALCODE */}
+          <a
+            href="#home"
+            aria-label="VimalCode home"
+            className="shrink-0 text-[16px] font-bold tracking-[-0.02em] text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)]"
+          >
+            VimalCode
           </a>
 
-          <div className="hidden items-center gap-8 text-sm font-medium md:flex">
+          {/* NAVIGATION */}
+          <div className="ml-7 hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                aria-current={activeSection === item.id ? "page" : undefined}
-                className="nav-link"
+                aria-current={
+                  activeSection === item.id ? "page" : undefined
+                }
+                className="text-[14px] font-bold tracking-[-0.01em] text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)]"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
@@ -74,38 +78,82 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:block">
+          {/* RIGHT SIDE ICONS */}
+          <div className="ml-auto hidden items-center gap-5 md:flex">
             <a
-              href="mailto:vimalcodeyt@gmail.com"
-              className="neon-button-primary rounded-[1rem] px-5 py-2.5 text-sm"
+              href={profile.links.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+              className="text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)]"
             >
-              Hire me
+              <FaGithub className="h-[18px] w-[18px]" />
+            </a>
+
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              className="text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)]"
+            >
+              <FaLinkedin className="h-[18px] w-[18px]" />
+            </a>
+
+            <a
+              href={profile.links.medium}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Medium"
+              title="Medium"
+              className="text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)]"
+            >
+              <FaMedium className="h-[18px] w-[18px]" />
+            </a>
+
+            <a
+              href={`mailto:${profile.email}`}
+              aria-label="Email VimalCode"
+              title="Email"
+              className="text-[var(--foreground)] transition-colors duration-200 hover:text-[var(--accent)]"
+            >
+              <Mail className="h-[18px] w-[18px]" />
             </a>
           </div>
 
+          {/* MOBILE MENU BUTTON */}
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[rgba(17,34,64,0.9)] text-[var(--foreground)] transition hover:border-[var(--border-strong)] hover:text-[var(--accent)] md:hidden sm:h-11 sm:w-11"
+            className="ml-auto inline-flex h-9 w-9 items-center justify-center text-[var(--foreground)] transition-colors hover:text-[var(--accent)] md:hidden"
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
             onClick={() => setMobileOpen((current) => !current)}
           >
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </button>
         </div>
 
+        {/* MOBILE NAVIGATION */}
         {mobileOpen ? (
           <div
             id="mobile-navigation"
-            className="border-t border-[rgba(100,255,218,0.12)] px-4 pb-4 pt-3 md:hidden"
+            className="border-t border-[rgba(100,255,218,0.12)] py-4 md:hidden"
           >
-            <div className="grid gap-2">
+            <div className="grid gap-1">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  aria-current={activeSection === item.id ? "page" : undefined}
-                  className="nav-link rounded-2xl px-4 py-3 text-sm font-medium"
+                  aria-current={
+                    activeSection === item.id ? "page" : undefined
+                  }
+                  className="py-3 text-[14px] font-bold tracking-[-0.01em] text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -113,11 +161,11 @@ export default function Navbar() {
               ))}
 
               <a
-                href="mailto:vimalcodeyt@gmail.com"
-                className="neon-button-primary mt-2 rounded-2xl px-4 py-3 text-sm"
+                href={`mailto:${profile.email}`}
+                className="mt-2 py-3 text-sm font-semibold text-[var(--accent)]"
                 onClick={() => setMobileOpen(false)}
               >
-                Hire me
+                Email me
               </a>
             </div>
           </div>
